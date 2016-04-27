@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="DeveloperTime.Main" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="DeveloperTime"
+	ResizeMode="CanMinimize"
+	Height="222"
+	Width="338" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="Manual">
+	<StackPanel>
+		<StackPanel
+			Orientation="Horizontal"
+			Height="35">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				
+				<TextBox Grid.Column="0"
+				         x:Name="txtNombreProyecto"
+				         Width="196" />
+				<Grid Grid.Column="1">
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+                    <Viewbox Width="98" Grid.Row="0">
+					<Label 
+					       x:Name="lblTiempoTotal"
+					        />
+                    </Viewbox>
+                    <Viewbox Width="98" Grid.Row="1">
+                    <Label 
+					       x:Name="lblTiempo"
+					        />
+                    </Viewbox>
+                </Grid>
+			</Grid>
+			<Button
+				x:Name="btnOnOff"
+				Content="On"
+				Width="33" />
+		</StackPanel>
+		<ScrollViewer
+			Height="135"
+			VerticalScrollBarVisibility="Auto">
+			<ListView
+				x:Name="projectsList" />
+		</ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+		<Button Grid.Column="0"
+			x:Name="btnNuevo"
+			Height="20"
+			Content="Nuevo" />
+            <Button Grid.Column="1"
+			x:Name="btnElimina"
+			Height="20"
+			Content="Elimina" />
+        </Grid>
+    </StackPanel>
+</Window>
